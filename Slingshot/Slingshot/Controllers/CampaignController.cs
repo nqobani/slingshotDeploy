@@ -39,7 +39,9 @@ namespace Slingshot.Controllers
         [Route("uploadImage")]
         public string uploadImage()
         {
-            //Directory.CreateDirectory(@"C:\Users\User\Music\images");
+            Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\vCard");
+            Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\attachment");
+            Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\thumbnails");
             //string sourceFile = Path.Combine(@"C:\Users\User\Music\", "banner.jpg");
             //string destFile = Path.Combine(@"C:\Users\User\Music\images\", "banner.jpg");
             return Directory.GetCurrentDirectory() + "|vCard";
