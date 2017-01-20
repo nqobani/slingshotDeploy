@@ -37,12 +37,12 @@ namespace Slingshot.Controllers
             return obj.ShareCampaigns(userId, campaignId);
         }
         [Route("uploadImage")]
-        public void uploadImage()
+        public string uploadImage()
         {
-            Directory.CreateDirectory(@"C:\Users\User\Music\images");
-            string sourceFile = Path.Combine(@"C:\Users\User\Music\", "banner.jpg");
-            string destFile = Path.Combine(@"C:\Users\User\Music\images\", "banner.jpg");
-            File.Copy(sourceFile, destFile, true);
+            //Directory.CreateDirectory(@"C:\Users\User\Music\images");
+            //string sourceFile = Path.Combine(@"C:\Users\User\Music\", "banner.jpg");
+            //string destFile = Path.Combine(@"C:\Users\User\Music\images\", "banner.jpg");
+            return Directory.GetCurrentDirectory() + "|vCard";
         }
     }
 }
